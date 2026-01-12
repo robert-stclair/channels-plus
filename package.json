@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@vee-validate/rules": "^4.15.1",
     "@vueuse/core": "^10.11.0",
+    "express": "^5.2.1",
     "floating-vue": "^5.2.2",
     "jquery": "^3.7.1",
     "lodash-es": "^4.17.21",
