@@ -21,7 +21,6 @@
     "jquery": "^3.7.1",
     "lodash-es": "^4.17.21",
     "sass": "^1.69.5",
-    "sui-vue3": "github:siteminder-au/sui#vue3",
     "vee-validate": "^4.15.1",
     "vite": "^5.0.11",
     "vue": "^3.4.38",
