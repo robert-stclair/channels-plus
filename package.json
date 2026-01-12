@@ -1,0 +1,30 @@
+{
+  "name": "channels-plus-prototypes",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SUI Vue3 Prototyping Environment for Channels+",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vee-validate/rules": "^4.15.1",
+    "@vueuse/core": "^10.11.0",
+    "floating-vue": "^5.2.2",
+    "jquery": "^3.7.1",
+    "lodash-es": "^4.17.21",
+    "sui-vue3": "github:siteminder-au/sui#vue3",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.4.38",
+    "vue-i18n": "^9.14.5",
+    "vue-multiselect": "^3.4.0",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "sass": "^1.69.5",
+    "vite": "^5.0.11"
+  }
+}

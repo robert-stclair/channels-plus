@@ -1,0 +1,101 @@
+/**
+ * Utility classes matching platform-property patterns
+ * Using pp-* prefix to avoid conflicts with SUI
+ */
+
+/* Layout */
+.pp-flex {
+  display: flex;
+}
+
+.pp-flex-row {
+  flex-direction: row;
+}
+
+.pp-grid {
+  display: grid;
+}
+
+.pp-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pp-gap-24 {
+  gap: 24px;
+}
+
+/* Flexbox utilities */
+.pp-justify-between {
+  justify-content: space-between;
+}
+
+.pp-items-center {
+  align-items: center;
+}
+
+/* Spacing - Margin */
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.pp-mb-0 {
+  margin-bottom: 0;
+}
+
+.pp-mb-4 {
+  margin-bottom: 4px;
+}
+
+.pp-mb-8 {
+  margin-bottom: 8px;
+}
+
+.pp-mb-12 {
+  margin-bottom: 12px;
+}
+
+.pp-mb-24 {
+  margin-bottom: 24px;
+}
+
+.pp-mr-8 {
+  margin-right: 8px;
+}
+
+.pp-mt-24 {
+  margin-top: 24px;
+}
+
+.pp-mt-48 {
+  margin-top: 48px;
+}
+
+/* Spacing - Padding */
+.pp-pt-48 {
+  padding-top: 48px;
+}
+
+/* Sizing */
+.pp-h-full {
+  height: 100%;
+}
+
+/* Colors */
+.pp-text-grey-neu-dark {
+  color: #717171;
+}
+
+.pp-text-primary-blue {
+  color: #006add;
+}
+
+/* Divider styling for performance metrics */
+.divide > * {
+  padding-right: 32px;
+}
+
+.divide > * + * {
+  border-right: none;
+  border-left: 1px solid #c6d0e0;
+  padding-left: 32px;
+}
