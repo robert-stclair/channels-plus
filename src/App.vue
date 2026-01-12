@@ -135,6 +135,7 @@
           <div class="pp-pt-48">
             <h1 class="mb-8">{{ getPageTitle() }}</h1>
             <p v-if="currentPage === 'channels-connect'">One place to easily set up and connect to multiple channels</p>
+            <p v-if="currentPage === 'channels-network'">One place to easily reach high-value tour operators and travel professionals</p>
 
             <SmTabs v-if="currentPage === 'channels-connect'" v-model:activeTab="activeTab" class="pp-mt-48">
             <SmTab label="Performance">
