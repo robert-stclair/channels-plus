@@ -229,6 +229,7 @@ const channelsNetworkClicked = ref(false)
 watch([channelsConnectState, channelsNetworkState], () => {
   channelsPlusClicked.value = false
   channelsNetworkClicked.value = false
+  currentPage.value = 'inventory'
 })
 
 const handlePropertySettings = () => console.log('Property settings clicked')
