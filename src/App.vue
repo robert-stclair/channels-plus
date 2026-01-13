@@ -92,6 +92,7 @@
             </template>
           </SmVerticalNavItem>
           <SmVerticalNavItem
+            :key="`channels-plus-${channelsConnectState}-${channelsNetworkState}`"
             label="Channels Plus"
             :force-active-state="currentPage === 'channels-connect' || currentPage === 'channels-network' ? 'active' : 'in-active'"
             :suffix-badge="!channelsPlusClicked && channelsConnectState === 'upsell' && channelsNetworkState === 'upsell' ? { text: 'New', config: { lightThemeType: 'success' } } : null"
