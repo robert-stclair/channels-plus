@@ -12,6 +12,10 @@
   flex-direction: row;
 }
 
+.pp-flex-col {
+  flex-direction: column;
+}
+
 .pp-grid {
   display: grid;
 }
@@ -20,8 +24,24 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.pp-gap-4 {
+  gap: 4px;
+}
+
+.pp-gap-8 {
+  gap: 8px;
+}
+
+.pp-gap-16 {
+  gap: 16px;
+}
+
 .pp-gap-24 {
   gap: 24px;
+}
+
+.pp-gap-32 {
+  gap: 32px;
 }
 
 /* Flexbox utilities */
@@ -29,8 +49,16 @@
   justify-content: space-between;
 }
 
+.pp-justify-center {
+  justify-content: center;
+}
+
 .pp-items-center {
   align-items: center;
+}
+
+.pp-items-start {
+  align-items: flex-start;
 }
 
 /* Spacing - Margin */
@@ -54,12 +82,32 @@
   margin-bottom: 12px;
 }
 
+.pp-mb-16 {
+  margin-bottom: 16px;
+}
+
 .pp-mb-24 {
   margin-bottom: 24px;
 }
 
 .pp-mr-8 {
   margin-right: 8px;
+}
+
+.pp-mr-12 {
+  margin-right: 12px;
+}
+
+.pp-ml-8 {
+  margin-left: 8px;
+}
+
+.pp-mt-8 {
+  margin-top: 8px;
+}
+
+.pp-mt-16 {
+  margin-top: 16px;
 }
 
 .pp-mt-24 {
@@ -75,9 +123,64 @@
   padding-top: 48px;
 }
 
+.pp-py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 /* Sizing */
 .pp-h-full {
   height: 100%;
+}
+
+/* Typography */
+.pp-text-xs {
+  font-size: 12px;
+}
+
+.pp-text-sm {
+  font-size: 14px;
+}
+
+.pp-text-para-small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.pp-text-h2 {
+  font-size: 30px;
+}
+
+.pp-font-semibold {
+  font-weight: 600;
+}
+
+.pp-leading-h2 {
+  line-height: 36px;
+}
+
+.pp-uppercase {
+  text-transform: uppercase;
+}
+
+.sm-text--small {
+  font-size: 12px;
+}
+
+/* Tile Headers */
+.pp-tile-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pp-tile-header {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 /* Colors */
@@ -85,8 +188,25 @@
   color: #717171;
 }
 
+.pp-disabled-text {
+  color: #999;
+}
+
+.pp-text-primary {
+  color: #006add;
+}
+
 .pp-text-primary-blue {
   color: #006add;
+}
+
+/* Links */
+.pp-no-underline {
+  text-decoration: none;
+}
+
+.hover\:pp-underline:hover {
+  text-decoration: underline;
 }
 
 /* Divider styling for performance metrics */
@@ -98,4 +218,108 @@
   border-right: none;
   border-left: 1px solid #c6d0e0;
   padding-left: 32px;
+}
+
+/* Button-like text span */
+.pp-span-button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Padding utilities */
+.pp-px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Border radius */
+.pp-rounded-full {
+  border-radius: 9999px;
+}
+
+/* Status badge notices */
+.notice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+.notice.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.notice.warning {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.notice.alert {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.notice.info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Text color utilities */
+.pp-text-app-warning {
+  color: #ff9800;
+}
+
+.pp-text-app-success {
+  color: #4caf50;
+}
+
+/* Property status icon */
+.pp-property-status-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Borders */
+.pp-border-top {
+  border-top: 1px solid #e0e0e0;
+}
+
+.pp-tile-select {
+  width: 200px;
+}
+
+/* Available room types calendar styling */
+.pp-available {
+  padding: 5px 11px;
+  border-radius: 8px;
+}
+
+.pp-available.zero {
+  background-color: #e3f2fd;
+}
+
+/* Pace summary percentage badges */
+.pp-icon-up {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+}
+
+.pp-icon-down {
+  color: #e65100;
+  background-color: #fff3e0;
+}
+
+.pp-icon-neutral {
+  color: #1565c0;
+  background-color: #e3f2fd;
+}
+
+.pp-tile-select {
+  width: 200px;
 }

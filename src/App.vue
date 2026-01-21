@@ -56,9 +56,17 @@
 
       <template #nav>
         <SmHorizontalNav>
-          <SmHorizontalNavItem label="Dashboard" />
+          <SmHorizontalNavItem
+            label="Dashboard"
+            :force-active-state="topNavSection === 'dashboard' ? 'exact-active' : 'in-active'"
+            @click="handleTopNavClick('dashboard')"
+          />
           <SmHorizontalNavItem label="Rooms and rates" />
-          <SmHorizontalNavItem label="Distribution" force-active-state="exact-active" />
+          <SmHorizontalNavItem
+            label="Distribution"
+            :force-active-state="topNavSection === 'distribution' ? 'exact-active' : 'in-active'"
+            @click="handleTopNavClick('distribution')"
+          />
           <SmHorizontalNavItem label="Direct booking" />
           <SmHorizontalNavItem label="Reservations" />
           <SmHorizontalNavItem label="Insights" />
@@ -68,8 +76,8 @@
       </template>
     </SmAppHeader>
 
-    <div class="app-layout">
-      <SmAside class="app-aside">
+    <div class="app-layout" :class="{ 'app-layout--no-sidebar': topNavSection === 'dashboard' }">
+      <SmAside v-if="topNavSection !== 'dashboard'" class="app-aside">
         <SmVerticalNav>
           <SmVerticalNavItem
             label="Inventory"
@@ -141,7 +149,11 @@
       </SmAside>
 
       <main class="app-main">
-        <SmContainer full-width>
+        <!-- Dashboard: full-width, no container -->
+        <DashboardView v-if="topNavSection === 'dashboard'" />
+
+        <!-- Other sections: with container and padding -->
+        <SmContainer v-else full-width>
           <div class="pp-pt-48">
             <InventoryView v-if="currentPage === 'inventory'" />
             <ChannelsConnectView
@@ -208,6 +220,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
+import DashboardView from './views/DashboardView.vue'
 import InventoryView from './views/InventoryView.vue'
 import ChannelsConnectView from './views/ChannelsConnectView.vue'
 import ChannelsNetworkView from './views/ChannelsNetworkView.vue'
@@ -215,7 +228,8 @@ import ChannelsPlusSettingsView from './views/ChannelsPlusSettingsView.vue'
 
 const tabletNavVisible = ref(false)
 const selectedProperty = ref('A Park Hyatt Sydney')
-const currentPage = ref('inventory')
+const topNavSection = ref('dashboard') // Top-level navigation: 'dashboard' or 'distribution'
+const currentPage = ref('inventory') // Page within a section
 const settingsPanelVisible = ref(false)
 
 // Product states: 'upsell' or 'active'
@@ -232,6 +246,16 @@ watch([channelsConnectState, channelsNetworkState], () => {
   channelsNetworkClicked.value = false
   currentPage.value = 'inventory'
 })
+
+// Handle top-level navigation clicks
+const handleTopNavClick = (section) => {
+  topNavSection.value = section
+  if (section === 'dashboard') {
+    currentPage.value = 'dashboard'
+  } else if (section === 'distribution') {
+    currentPage.value = 'inventory'
+  }
+}
 
 const handlePropertySettings = () => console.log('Property settings clicked')
 const handleUserManagement = () => console.log('User management clicked')
@@ -282,6 +306,14 @@ onUnmounted(() => {
   flex: 1;
   display: flex;
   overflow: hidden;
+}
+
+.app-layout--no-sidebar {
+  /* Full-width layout when sidebar is hidden */
+}
+
+.app-layout--no-sidebar .app-main {
+  width: 100%;
 }
 
 .app-main {

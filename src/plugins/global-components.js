@@ -21,6 +21,9 @@ import SmHelpCard from '@sui/app/components/sm-help-card/sm-help-card.vue'
 import SmHintCard from '@sui/app/components/sm-hint-card/sm-hint-card.vue'
 import SmDivider from '@sui/app/components/sm-divider/sm-divider.vue'
 import SmAccordion from '@sui/app/components/sm-accordion/sm-accordion.vue'
+import SmExpandableCard from '@sui/app/components/sm-expandable-card/sm-expandable-card.vue'
+import SmExpandableCardBody from '@sui/app/components/sm-expandable-card/sm-expandable-card-body.vue'
+import SmHtmlTruncator from '@sui/app/components/sm-html-truncator/sm-html-truncator.vue'
 import SmTable from '@sui/app/components/sm-table/sm-table.vue'
 import SmBanner from '@sui/app/components/sm-banner/sm-banner.vue'
 import SmContainer from '@sui/app/components/sm-container/sm-container.vue'
@@ -77,6 +80,9 @@ export default {
     app.component('SmHintCard', SmHintCard)
     app.component('SmDivider', SmDivider)
     app.component('SmAccordion', SmAccordion)
+    app.component('SmExpandableCard', SmExpandableCard)
+    app.component('SmExpandableCardBody', SmExpandableCardBody)
+    app.component('SmHtmlTruncator', SmHtmlTruncator)
     app.component('SmTable', SmTable)
     app.component('SmBanner', SmBanner)
     app.component('SmContainer', SmContainer)
