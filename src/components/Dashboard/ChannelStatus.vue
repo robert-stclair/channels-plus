@@ -165,16 +165,29 @@ const showAllEnabled = ref(false)
 
 const enabledChannels = ref([
   'DIRECT BOOKING',
+  'Booking.com',
+  'Expedia',
+  { name: 'Bing Hotel Ads', message: 'Channel room rate disabled' },
   'ALTURA DESTINATION SERVICES',
   'ASIAYO',
-  { name: 'Bing Hotel Ads', message: 'Channel room rate disabled' },
-  'Booking.com',
-  'Expedia'
+  'Agoda',
+  'Hotels.com',
+  'Vrbo',
+  'TripAdvisor',
+  'Google Hotel Ads',
+  'Ctrip'
 ])
 
-const disabledChannels = ref([])
+const disabledChannels = ref([
+  'Hostelworld',
+  'Hotelbeds'
+])
 
-const awaitingSetupChannels = ref(['Airbnb'])
+const awaitingSetupChannels = ref([
+  'Airbnb',
+  'Despegar',
+  'Trivago'
+])
 
 const visibleEnabledChannels = computed(() => {
   return showAllEnabled.value

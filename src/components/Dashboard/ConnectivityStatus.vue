@@ -32,25 +32,25 @@ import { ref } from 'vue'
 const connectivityItems = ref([
   {
     name: 'Opera ADS',
-    ratesMapped: 1,
+    ratesMapped: 24,
     totalRates: 27,
     href: '#'
   },
   {
     name: 'SIHOT',
-    ratesMapped: 0,
+    ratesMapped: 18,
     totalRates: 27,
     href: '#'
   },
   {
     name: 'Opera eXchange Interface',
-    ratesMapped: 0,
+    ratesMapped: 27,
     totalRates: 27,
     href: '#'
   },
   {
     name: 'LMS',
-    ratesMapped: 0,
+    ratesMapped: 15,
     totalRates: 27,
     href: '#'
   }

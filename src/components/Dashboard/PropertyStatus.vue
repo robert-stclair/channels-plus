@@ -52,10 +52,10 @@ import { ref } from 'vue'
 const statusItems = ref([
   {
     label: 'Unconfirmed reservations requiring action',
-    count: 0,
+    count: 2,
     hasLink: true,
     href: '#',
-    badgeClass: 'notice success'
+    badgeClass: 'notice info'
   },
   {
     label: 'Reservation delivery failures today',
@@ -66,9 +66,9 @@ const statusItems = ref([
   },
   {
     label: 'Channels experiencing delayed updates',
-    count: 0,
+    count: 1,
     hasLink: false,
-    badgeClass: 'notice success'
+    badgeClass: 'notice warning'
   },
   {
     label: 'Disabled channel room rates',

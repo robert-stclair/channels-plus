@@ -33,11 +33,11 @@
 import { ref } from 'vue'
 
 const metrics = ref([
-  { label: 'arrivals', value: 0 },
-  { label: 'departures', value: 0 },
-  { label: 'new bookings', value: 0 },
-  { label: 'stays', value: 0 },
-  { label: 'cancellations', value: 0 }
+  { label: 'arrivals', value: 12 },
+  { label: 'departures', value: 15 },
+  { label: 'new bookings', value: 8 },
+  { label: 'stays', value: 47 },
+  { label: 'cancellations', value: 2 }
 ])
 </script>
 

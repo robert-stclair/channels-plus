@@ -116,14 +116,14 @@ import { ref } from 'vue'
 
 const paceData = ref({
   last7Days: {
-    roomNightsSold: 0,
-    revenue: 0,
-    adr: 0
+    roomNightsSold: 89,
+    revenue: '$15,234',
+    adr: '$171'
   },
   next7Days: {
-    roomNightsSold: 0,
-    revenue: 0,
-    adr: 0
+    roomNightsSold: 124,
+    revenue: '$22,896',
+    adr: '$185'
   }
 })
 </script>

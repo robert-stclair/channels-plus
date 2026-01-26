@@ -16,7 +16,10 @@
 
       <!-- Right section: 1 column -->
       <div class="col-span-1 gap-24 grid grid-cols-1">
-        <ErrorAlert />
+        <SmartGuide v-if="viewMode === 'smart-guide'" />
+        <ErrorAlert v-else />
+
+        <ChannelOffers />
 
         <PropertyStatus />
 
@@ -33,17 +36,38 @@
 </template>
 
 <script setup>
-import TodaysReservations from '../components/Dashboard/TodaysReservations.vue'
-import AvailableRoomTypes from '../components/Dashboard/AvailableRoomTypes.vue'
-import PaceSummary from '../components/Dashboard/PaceSummary.vue'
-import TopChannels from '../components/Dashboard/TopChannels.vue'
-import DemandPlusPerformance from '../components/Dashboard/DemandPlusPerformance.vue'
-import ErrorAlert from '../components/Dashboard/ErrorAlert.vue'
-import PropertyStatus from '../components/Dashboard/PropertyStatus.vue'
-import ConnectivityStatus from '../components/Dashboard/ConnectivityStatus.vue'
-import ChannelStatus from '../components/Dashboard/ChannelStatus.vue'
-import HelpCentre from '../components/Dashboard/HelpCentre.vue'
-import AppStore from '../components/Dashboard/AppStore.vue'
+import { onMounted, onUnmounted } from 'vue'
+import TodaysReservations from '../components/dashboard/TodaysReservations.vue'
+import AvailableRoomTypes from '../components/dashboard/AvailableRoomTypes.vue'
+import PaceSummary from '../components/dashboard/PaceSummary.vue'
+import TopChannels from '../components/dashboard/TopChannels.vue'
+import DemandPlusPerformance from '../components/dashboard/DemandPlusPerformance.vue'
+import SmartGuide from '../components/dashboard/SmartGuide.vue'
+import ErrorAlert from '../components/dashboard/ErrorAlert.vue'
+import ChannelOffers from '../components/dashboard/ChannelOffers.vue'
+import PropertyStatus from '../components/dashboard/PropertyStatus.vue'
+import ConnectivityStatus from '../components/dashboard/ConnectivityStatus.vue'
+import ChannelStatus from '../components/dashboard/ChannelStatus.vue'
+import HelpCentre from '../components/dashboard/HelpCentre.vue'
+import AppStore from '../components/dashboard/AppStore.vue'
+
+const props = defineProps({
+  viewMode: {
+    type: String,
+    default: 'smart-guide'
+  }
+})
+
+const propertyName = 'Harbour Rocks Hotel Sydney'
+const originalTitle = document.title
+
+onMounted(() => {
+  document.title = `Dashboard | ${propertyName}`
+})
+
+onUnmounted(() => {
+  document.title = originalTitle
+})
 </script>
 
 <style scoped>
@@ -51,8 +75,7 @@ import AppStore from '../components/Dashboard/AppStore.vue'
   background-color: #f5f9ff;
   min-height: calc(100vh - 64px);
   padding: 58px 24px 24px;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .gap-24 {

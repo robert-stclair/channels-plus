@@ -74,29 +74,29 @@ import warningIcon from './images/utility-warning.svg'
 const metrics = ref([
   {
     label: 'Impressions',
-    value: '0',
+    value: '12,485',
     icon: impressionsIcon,
     tooltip: 'Number of times your property was shown in search results'
   },
   {
     label: 'Clicks',
-    value: '0',
+    value: '342',
     icon: clicksIcon,
     tooltip: 'Number of times a potential guest clicked on your direct booking link'
   },
   {
     label: 'Reservations',
-    value: '0',
+    value: '18',
     icon: reservationsIcon
   },
   {
     label: 'Revenue (AUD)',
-    value: '0',
+    value: '$3,456',
     icon: revenueIcon
   },
   {
     label: 'Direct Booking %',
-    value: '0%',
+    value: '15.2%',
     icon: directBookingIcon,
     tooltip: 'The percentage of direct booking reservations from Demand Plus'
   }

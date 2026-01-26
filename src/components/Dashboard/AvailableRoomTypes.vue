@@ -82,15 +82,15 @@ const roomTypesOptions = computed(() =>
 )
 
 const availability = ref([
-  { day: 'TODAY', date: 'Jan 20', count: 0, isWeekend: false },
-  { day: 'WED', date: 'Jan 21', count: 0, isWeekend: false },
-  { day: 'THU', date: 'Jan 22', count: 0, isWeekend: false },
-  { day: 'FRI', date: 'Jan 23', count: 0, isWeekend: false },
-  { day: 'SAT', date: 'Jan 24', count: 0, isWeekend: true },
-  { day: 'SUN', date: 'Jan 25', count: 0, isWeekend: true },
-  { day: 'MON', date: 'Jan 26', count: 0, isWeekend: false },
-  { day: 'TUE', date: 'Jan 27', count: 0, isWeekend: false },
-  { day: 'WED', date: 'Jan 28', count: 0, isWeekend: false },
-  { day: 'THU', date: 'Jan 29', count: 0, isWeekend: false }
+  { day: 'TODAY', date: 'Jan 22', count: 8, isWeekend: false },
+  { day: 'THU', date: 'Jan 23', count: 12, isWeekend: false },
+  { day: 'FRI', date: 'Jan 24', count: 5, isWeekend: false },
+  { day: 'SAT', date: 'Jan 25', count: 2, isWeekend: true },
+  { day: 'SUN', date: 'Jan 26', count: 0, isWeekend: true },
+  { day: 'MON', date: 'Jan 27', count: 15, isWeekend: false },
+  { day: 'TUE', date: 'Jan 28', count: 18, isWeekend: false },
+  { day: 'WED', date: 'Jan 29', count: 14, isWeekend: false },
+  { day: 'THU', date: 'Jan 30', count: 11, isWeekend: false },
+  { day: 'FRI', date: 'Jan 31', count: 6, isWeekend: false }
 ])
 </script>

@@ -150,7 +150,7 @@
 
       <main class="app-main">
         <!-- Dashboard: full-width, no container -->
-        <DashboardView v-if="topNavSection === 'dashboard'" />
+        <DashboardView v-if="topNavSection === 'dashboard'" :view-mode="dashboardViewMode" />
 
         <!-- Other sections: with container and padding -->
         <SmContainer v-else full-width>
@@ -187,7 +187,7 @@
                 <p class="pp-mb-8" style="font-size: 12px; color: #717171;">Press <strong>~</strong> (tilda) to toggle this panel</p>
               </div>
 
-              <div>
+              <div v-if="topNavSection === 'distribution'" class="pp-mb-16">
                 <label class="pp-mb-4" style="display: block; font-weight: 600; font-size: 13px;">Product State</label>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                   <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
@@ -207,6 +207,30 @@
                       @change="() => { channelsConnectState = 'active'; channelsNetworkState = 'upsell'; }"
                     />
                     <span style="font-size: 13px;">Active C+, new to wholesalers</span>
+                  </label>
+                </div>
+              </div>
+
+              <div v-if="topNavSection === 'dashboard'">
+                <label class="pp-mb-4" style="display: block; font-weight: 600; font-size: 13px;">Dashboard View</label>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input
+                      type="radio"
+                      name="dashboardView"
+                      value="default"
+                      v-model="dashboardViewMode"
+                    />
+                    <span style="font-size: 13px;">Default (with error alert)</span>
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input
+                      type="radio"
+                      name="dashboardView"
+                      value="smart-guide"
+                      v-model="dashboardViewMode"
+                    />
+                    <span style="font-size: 13px;">Smart guide</span>
                   </label>
                 </div>
               </div>
@@ -235,6 +259,9 @@ const settingsPanelVisible = ref(false)
 // Product states: 'upsell' or 'active'
 const channelsConnectState = ref('upsell')
 const channelsNetworkState = ref('upsell')
+
+// Dashboard view mode: 'default' or 'smart-guide'
+const dashboardViewMode = ref('smart-guide')
 
 // Track badge clicks for this session
 const channelsPlusClicked = ref(false)
