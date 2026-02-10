@@ -1,6 +1,6 @@
-# Channels+ Prototypes
+# Platform Property Prototypes
 
-A simplified SUI Vue3 prototyping environment for Channels+, based on the ux-prototypes-sui setup.
+A simplified SUI Vue3 prototyping environment for Platform Property, based on the ux-prototypes-sui setup.
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ The app will be available at `http://localhost:3003`
 ## Project Structure
 
 ```
-channels-plus/
+pp-proto/
 ├── src/
 │   ├── plugins/
 │   │   └── global-components.js  # Globally registered SUI components

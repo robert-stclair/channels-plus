@@ -1,8 +1,8 @@
 {
-  "name": "channels-plus-prototypes",
+  "name": "pp-proto",
   "version": "1.0.0",
   "type": "module",
-  "description": "SUI Vue3 Prototyping Environment for Channels+",
+  "description": "Platform Property Vue3 Prototyping Environment",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
